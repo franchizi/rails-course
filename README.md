@@ -1,5 +1,5 @@
 # rails-course
 
-#Hello
+# Hello
 
-#First commit in Feature Branch
+# First commit in Feature Branch
