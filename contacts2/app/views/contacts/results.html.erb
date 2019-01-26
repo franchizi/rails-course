@@ -1,0 +1,29 @@
+<style>
+    div{
+        padding: 10px;
+    }
+</style>
+
+<h1>Search Results</h1>
+
+<div><form action='contacts/results' method='POST'>
+    <input type='text' name='result' placeholder='Search Contacts'>
+    <input type='submit' value='Go'>
+</form></div>
+
+<% @result.each do |contact| %>
+<div>
+    <%= contact.first_name %> 
+    <%= contact.last_name %> |
+    <%= contact.phone %> |
+    <%= contact.email %> |
+    <%= contact.address %> 
+    <%= contact.city %> 
+    <%= contact.state %> 
+    <%= contact.zip %>
+    <a href='/contacts/edit?id=<%= contact.id %>'>Edit</a>
+    <a href='/contacts/delete?id=<%= contact.id %>'>Delete</a>
+</div>
+<% end %>
+
+<a href='/'>Home</a>
