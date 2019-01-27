@@ -7,10 +7,11 @@
 <h1>Home Page</h1>
 
 <div>
-    <form action='contacts/results' method='POST'>
-    <input type='text' name='result' placeholder='Search Contacts'>
-    <input type='submit' value='Go'>
-    </form>
+<%= form_for(contacts_path, method: :get) do %>
+<%= text_field_tag :result, params[:result], placeholder: 'Search Contacts' %> 
+<%= submit_tag 'Go'%>
+<% end %>
+
 </div>
 
 <div><a href='/contacts/new'>Create New Contact</a></div>

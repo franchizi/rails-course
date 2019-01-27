@@ -3,7 +3,12 @@ class ContactsController < ApplicationController
     end
     
     def index
-        @contacts = Contact.all
+        if params[:result] 
+            query = "%#{params[:result]}%" 
+	        @contacts = Contact.where('first_name LIKE ? OR last_name LIKE ?', query, query) 
+	    else
+            @contacts = Contact.all
+        end
     end
     
     def new
@@ -45,10 +50,5 @@ class ContactsController < ApplicationController
         contact = Contact.find_by(id: params[:id])
         contact.save
         redirect_to '/contacts'
-    end
-    
-    def results
-        query = "%#{params[:result]}%"
-        @result = Contact.where('first_name LIKE ? OR last_name LIKE ?', query, query)
     end
 end

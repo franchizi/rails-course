@@ -4,12 +4,12 @@
     }
 </style>
 
-<h1>All Contacts</h1>
+<h1>Contacts</h1>
 
-<form action='/contacts/results' method='POST'>
-    <input type='text' name='result' placeholder='Search Contacts'>
-    <input type='submit' value='Go'>
-</form>
+<%= form_for(contacts_path, method: :get) do %>
+<%= text_field_tag :result, params[:result], placeholder: 'Search Contacts' %> 
+<%= submit_tag 'Go'%>
+<% end %>
 
 <div><a href='/contacts/new'>Create New Contact</a></div>
 
@@ -28,4 +28,5 @@
 </div>
 <% end %>
 
-<a href='/'>Home</a>
+<div><a href='/'>Home</a></div>
+<div><a href='/contacts'>View All Contacts</a></div>
