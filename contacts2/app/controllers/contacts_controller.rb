@@ -2,6 +2,10 @@ class ContactsController < ApplicationController
     def home
     end
     
+    def contact_params
+        params.permit(:first_name, :last_name, :phone, :email, :address, :city, :state, :zip)
+    end
+    
     def index
         if params[:result] 
             query = "%#{params[:result]}%" 
@@ -15,17 +19,8 @@ class ContactsController < ApplicationController
     end
     
     def create
-        contact = Contact.new
-        contact.first_name = params[:first_name]
-        contact.last_name = params[:last_name]
-        contact.phone = params[:phone]
-        contact.email = params[:email]
-        contact.address = params[:address]
-        contact.city = params[:city]
-        contact.state = params[:state]
-        contact.zip = params[:zip]
-        contact.save
-        redirect_to '/contacts'
+        contact = Contact.new(contact_params)
+        redirect_to contacts_path if contact.save
     end
     
     def edit
