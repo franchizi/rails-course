@@ -1,0 +1,12 @@
+<form action='/cars/update' method='POST'>
+    <input type='hidden' name='id' value='<%= @edit.id %>'
+    <input type='text' name='name' value='<%= @edit.name %>'>
+    <input type='text' name='color' value='<%= @edit.color %>'>
+    <input type='text' name='year' value='<%= @edit.year %>'>
+    <select name='brand_id'>
+        <% @brands.each do |brand| %>
+            <option value='<%= brand.id %>'><%= brand.name %></option>
+        <% end %>
+    </select>
+    <input type='submit' value='Save'>
+</form>

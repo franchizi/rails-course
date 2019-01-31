@@ -1,0 +1,11 @@
+<form action='/cars/create' method='POST'>
+    <div><input type='text' name='name' placeholder='Name'></div>
+    <div><input type='text' name='color' placeholder='Color'></div>
+    <div><input type='text' name='year' placeholder='Year'></div>
+    <div><select name='brand_id'></div>
+        <% @brands.each do |brand| %>
+            <option value='<%= brand.id %>'><%= brand.name %></option>
+        <% end %>
+    </select>
+    <input type='submit' value='Save'>
+</form>
