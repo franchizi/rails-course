@@ -1,0 +1,32 @@
+<style>
+    div{
+        padding: 10px;
+    }
+</style>
+
+<h1>Contacts</h1>
+
+<%= form_for(contacts_path, method: :get) do %>
+<%= text_field_tag :result, params[:result], placeholder: 'Search Contacts' %> 
+<%= submit_tag 'Go'%>
+<% end %>
+
+<div><a href='/contacts/new'>Create New Contact</a></div>
+
+<% @contacts.each do |contact| %>
+<div>
+    <%= contact.first_name %> 
+    <%= contact.last_name %> |
+    <%= contact.phone %> |
+    <%= contact.email %> |
+    <%= contact.address %> 
+    <%= contact.city %> 
+    <%= contact.state %> 
+    <%= contact.zip %>
+    <a href='/contacts/edit?id=<%= contact.id %>'>Edit</a>
+    <a href='/contacts/delete?id=<%= contact.id %>'>Delete</a>
+</div>
+<% end %>
+
+<div><a href='/'>Home</a></div>
+<div><a href='/contacts'>View All Contacts</a></div>
