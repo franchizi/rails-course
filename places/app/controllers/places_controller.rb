@@ -18,7 +18,7 @@ class PlacesController < ApplicationController
         place.picture = params[:place][:picture]
         place.description = params[:place][:description]
         place.save
-        redirect_to '/places'
+        redirect_to places_path
     end
     
     def edit 
@@ -31,12 +31,13 @@ class PlacesController < ApplicationController
         place.picture = params[:place][:picture]
         place.description = params[:place][:description]
         place.save
-        redirect_to '/places'
+        redirect_to places_path
     end
     
     def destroy
         place = Place.find(params[:id])
         place.destroy
+        redirect_to places_path
     end
     
 end
