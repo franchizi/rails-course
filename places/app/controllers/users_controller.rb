@@ -51,4 +51,10 @@ class UsersController < ApplicationController
         redirect_to user_path(user)
     end
     
+    def delete_place
+        user_place = UserPlace.find(params[:id])
+        user_place.destroy
+        redirect_to users_path
+    end
 end
+

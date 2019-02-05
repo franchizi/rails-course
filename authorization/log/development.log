@@ -1,0 +1,847 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190203234314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:5
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203234314"]]
+  ↳ bin/rails:9
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-03 23:54:45.961018"], ["updated_at", "2019-02-03 23:54:45.961018"]]
+  ↳ bin/rails:9
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:01:39 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 17ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:01:41 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 136.56.78.60 at 2019-02-04 00:01:51 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:03:13 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 815ms (Views: 813.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:05:54 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 00:05:54 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 73ms (Views: 37.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_up" for 136.56.78.60 at 2019-02-04 00:10:47 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 136.56.78.60 at 2019-02-04 00:11:14 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txJxNex8qszu74t07lhwjASC6B6WWrD/LZXjilT1i3hwyt5U1I9u7M1XSOXwhaZSNxOMvvoOKvCzw7OHE/C4xQ==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "bob@gmail.com"], ["encrypted_password", "$2a$11$PGobKLaZM/tkELIJp8BQWeXr.X3YDzZEPrSK9clLGZLjZbhmCVdCu"], ["created_at", "2019-02-04 00:11:14.251111"], ["updated_at", "2019-02-04 00:11:14.251111"]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 179ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:11:14 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:34:10 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 279ms (Views: 255.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:34:22 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 136.56.78.60 at 2019-02-04 00:34:24 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yXljERofSiDWj7CmXbu7cvUitxBtcIBERoZBhV4zF9JpC+fZ25cWo/dSqvc9jecP8YzRQUOo1dyWScPO5xTxDA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 12ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:34:24 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 00:34:24 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 136.56.78.60 at 2019-02-04 00:34:26 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5CLu2ZRj93HCAM8PWG1MsHtO+z2cWoFFQ/zBYezZijPSZGUdmACsJ6cuOchpYlYGtMtnw/jOPJc7x23U4QG0Lg==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 153ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:34:26 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:56:00 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 361ms (Views: 351.1ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 136.56.78.60 at 2019-02-04 00:56:25 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"veV3sjztU+aCNVz826cWE5qwyMxbst+elD5APv0NQovs0jOrGaIw6BBftyVjqBwnDFIfY01CR3giuO4A2FKF1A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:56:25 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 00:56:27 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 136.56.78.60 at 2019-02-04 00:56:30 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mzaGTbbeAN8LArmAhE/IiU9DOqkm5M1k4OjDI4Y1mejgi8vh1mM+f1TWG2oCKFOTa1aCHi/PdyWUH1zpb4P3ew==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 230ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 00:56:30 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+Migrating to DeviseCreateUsers (20190203234314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (1.2ms)[0m  [1m[35mDROP INDEX "index_users_on_reset_password_token"[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[35mDROP INDEX "index_users_on_email"[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190203234314"]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+Migrating to DeviseCreateUsers (20190203234314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "picture" varchar, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190203234314_devise_create_users.rb:44
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203234314"]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:01:22 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 263ms (Views: 251.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 01:01:37 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 44ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 136.56.78.60 at 2019-02-04 01:01:38 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RcZk18k7pegJ9+/pHSDXSieznCdWqJY9UEblDikw2VLIZEJamlBjExDW7cuQZ1Crwod7jx29CrFsnXnsfAvEnQ==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RcZk18k7pegJ9+/pHSDXSieznCdWqJY9UEblDikw2VLIZEJamlBjExDW7cuQZ1Crwod7jx29CrFsnXnsfAvEnQ==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 168ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 136.56.78.60 at 2019-02-04 01:01:43 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 136.56.78.60 at 2019-02-04 01:01:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dMQNtQrI8alkiHhGxoNcjg8U0uPiBr7HodvJqT4uBNjo1MvblnV1Tk3iFbcOrhgcJ1Tbw2mhnIWVDp3pIq+4iQ==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "bob@gmail.com"], ["encrypted_password", "$2a$11$AcDjEEHSjsN4Jyo83NMEYe7Zyk0IsYFKlazToD8El/ek6SlTLJrXq"], ["created_at", "2019-02-04 01:01:46.522078"], ["updated_at", "2019-02-04 01:01:46.522078"]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 170ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:01:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 136.56.78.60 at 2019-02-04 01:13:07 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3m7+yzfQMG/5rlmALYFtk8W28OzG8/cj+AWrxMzqtwAySiSVfDItnmieQ1feFafBc51deCI8s7d2xmFFlpLNOA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 34ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:13:23 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 222ms (Views: 220.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 01:13:25 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 98ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 136.56.78.60 at 2019-02-04 01:13:29 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 136.56.78.60 at 2019-02-04 01:16:19 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpnNI3dEyu137UJjtYFPC4e3apTpRC5h3RzjM7zpkmHXbGW9vJ1PpaWPl10VLAJ4xyMc0cJE3In66Wx6eoCerw==", "user"=>{"first_name"=>"Jim", "last_name"=>"Jones", "picture"=>"https://previews.123rf.com/images/vgstudio/vgstudio1107/vgstudio110700084/9896446-portrait-of-happy-smiling-business-man-isolated-on-white-background.jpg", "email"=>"bob2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :picture
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bob2@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 191ms (Views: 30.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 136.56.78.60 at 2019-02-04 01:16:52 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qeKvjNBGWw+OMr/O04HERQo6+MWlGDoa/Kx2jY5v7vUpT7hjPIIoCkC38ywKLG5odZb18lxPSUPSA8kmh0QZw==", "user"=>{"first_name"=>"Jim", "last_name"=>"Jones", "picture"=>"https://previews.123rf.com/images/vgstudio/vgstudio1107/vgstudio110700084/9896446-portrait-of-happy-smiling-business-man-isolated-on-white-background.jpg", "email"=>"jim@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :picture
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jim@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jim@gmail.com"], ["encrypted_password", "$2a$11$osGusqQ8XH6urklxb55MoOvz3BX7G5aNclSwUBdDGX1npvXcXUdSu"], ["created_at", "2019-02-04 01:16:52.232435"], ["updated_at", "2019-02-04 01:16:52.232435"]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 208ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:16:52 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:17:23 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:17:42 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:21:30 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:21:38 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:54:16 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:50
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 01:55:24 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:50
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:01:14 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:39
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:03:04 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:39
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:09:09 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 97ms (Views: 93.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:11:47 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:12:41 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 136.56.78.60 at 2019-02-04 02:12:43 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DMa6cu0EtYdDcpH7bl4Kr556MyPzIozjyJ0Fz/+J4ZE6xA4tUrekS1RIhMjlOLwHK4SDFyzH0S6sJ7sxU61OTQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:12:44 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:12:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:12:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:14:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:14:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:14:57 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:15:03 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jF3qDeFJi5kqtIgkAifmYg8Kj9l7ubd2Bc52DwQI8Nojz8rVr+OnTZyN++7aQeZS8ZBCJXqEHZfc54hnK4Pvhg==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/protected
+Completed 302 Found in 156ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:15:03 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering protected/index.html.erb within layouts/application
+  Rendered protected/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:15:14 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering protected/index.html.erb within layouts/application
+  Rendered protected/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:15:43 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:37
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:15:45 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering protected/index.html.erb within layouts/application
+  Rendered protected/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:15:46 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:37
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 136.56.78.60 at 2019-02-04 02:15:47 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RD6qLCvKvUNorfTg0+8Qb98B4wJTRGAU/lcYrwL/JNlpZKml18dzgrdciYPdvg7ietrtitkow0lVpj3F6dynZw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:15:47 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:15:50 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:15:50 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:15:52 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wQVCZxM9HcHNVfkhUM8i6z9zrpU/Ys++kvFv8yUFM9K/hqsYlyqViUeoiCO8Kgz/w14icO6PRDxUNcqsXC0T1A==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/protected
+Completed 302 Found in 146ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:15:52 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering protected/index.html.erb within layouts/application
+  Rendered protected/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:15:55 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:37
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 136.56.78.60 at 2019-02-04 02:15:58 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RHn9BbLgER+09GMczgQBF7ecsfPekQ3MaP8GWleq4XWoQlbcia/GdpXkgJobtyJxRC4pJgmcN8viiMrUYtCwug=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:15:58 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:16:01 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:16:03 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 136.56.78.60 at 2019-02-04 02:16:04 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kmu9yLA2ydpCEhesyJzQm+nSuliNJf/o9tZRZSRn6so2gpvpj84nR/dUs9gZij/cEnCbUnMqMzi3AvnkSoCnMQ==", "user"=>{"email"=>"bob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bob@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://ruby-marcusmitchell.c9users.io/
+Completed 302 Found in 147ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.56.78.60 at 2019-02-04 02:16:04 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:37
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/protected" for 136.56.78.60 at 2019-02-04 02:16:07 +0000
+Cannot render console from 136.56.78.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProtectedController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering protected/index.html.erb within layouts/application
+  Rendered protected/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
