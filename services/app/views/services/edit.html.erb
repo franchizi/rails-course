@@ -1,0 +1,14 @@
+<%= form_for @service do |f| %>
+    <div>
+        <%= f.text_field :name, placeholder: 'Name' %>
+    </div>
+    <div>
+        <%= f.text_field :logo, placeholder: 'Logo' %>
+    </div>
+    <div>
+        <%= f.text_area :description, placeholder: 'Description' %>
+    </div>
+    <div>
+        <%= f.submit 'Save' %>
+    </div>
+<% end %>
