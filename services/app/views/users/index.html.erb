@@ -11,10 +11,10 @@
             <img src='<%= user.picture %>' height='100px'>
         </div>
         <div>
-            <%= user.age %>
+            <h6><%= user.age %></h6>
         </div>
         <div>
-            <%= user.email %>
+            <h6><%= user.email %></h6>
         </div>
         <div class='btn btn-success'><%= link_to 'Edit', edit_user_path(user.id) %></div>
         <div class='btn btn-success'><%= link_to 'Show', user_path(user) %></div>
