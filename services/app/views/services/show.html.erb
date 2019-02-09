@@ -1,0 +1,10 @@
+<h1><%= @service.name %></h1>
+
+<h2>Service Users:</h2>
+
+<% @service.users.each do |user| %>
+    <div>
+        <h5><%= user.first_name %> <%= user.last_name %></h5>
+        <img src="<%= user.picture %>" height="100">
+    </div>
+<% end %>

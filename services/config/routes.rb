@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  delete '/users/remove_service' => 'users#delete_service'
+  resources :users
+  resources :services
+  post '/users/add_service' => 'users#add_service'
 end

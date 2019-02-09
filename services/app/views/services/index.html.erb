@@ -1,0 +1,14 @@
+<h1>Services</h1>
+
+<%= link_to 'New', new_service_path %>
+
+<% @services.each do |service| %>
+    <div class="service">
+        <h2><%= service.name %></h2>
+        <img src="<%= service.logo %>" height="100">
+        <p><%= service.description %></p>
+        <div class='btn btn-success'> <%= link_to 'Edit', edit_service_path(service.id) %></div>
+        <div class='btn btn-success'><%= link_to 'Show', service_path(service.id) %></div>
+        <div class='btn btn-danger'><%= link_to 'Delete', service_path(service.id), method: :delete %></div>
+    </div>
+<% end %>
