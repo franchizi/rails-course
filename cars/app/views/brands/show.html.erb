@@ -1,0 +1,7 @@
+<h1><%= @brand.name %></h1>
+
+<h2>Cars:</h2>
+
+<% @brand.cars.each do |car| %>
+    <div><%= car.name %></div>
+<% end %>
