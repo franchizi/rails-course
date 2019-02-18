@@ -1,0 +1,24 @@
+-rails console
+    like irb with your rails app loaded. You can check what's in your app. You can manipulate your data here as well.
+-partials review
+    templates in templates
+-asset pipeline
+    where you would compartmentalize your CSS Styling. Basically, using stylesheets instead of putting CSS in your HTML files.
+-flash message system
+    
+-validation
+    you can add necessary conditions to save something to the database.
+    I want to use this in my app. 
+
+
+
+2-14-19
+
+-rubocop
+    analyzes style in your code, and tells you where you have bad style.
+-byebug
+    allows you to look at the values of all the variables to double check that you understand what is happening.
+-rspec & capybara
+    -testing theory
+        -feature
+        -integration
