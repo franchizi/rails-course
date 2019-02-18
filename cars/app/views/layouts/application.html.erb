@@ -7,9 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <style>
+      body{
+        background-color:gold;
+      }
+    </style>
   </head>
 
   <body>
+    <a href='/brands'>Brands</a> | <a href='/cars'>Cars</a>
+    <p></p>
     <%= yield %>
   </body>
 </html>

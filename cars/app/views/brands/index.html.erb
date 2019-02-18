@@ -1,0 +1,18 @@
+<h1>Brands</h1>
+<a href='/brands/new'>New Brand</a>
+
+<% @brands.each do |brand| %>
+<p></p>
+    <div>
+        <div>
+            <%= brand.name %> | <%= brand.country %>
+        </div>
+        <div>
+            <a href='/brands/edit?id=<%= brand.id %>'>Edit</a>
+            <a href='/brands/delete?id=<%= brand.id %>'>Delete</a>
+            <a href='/brands/show?id=<%= brand.id %>'>Show</a>
+        </div>
+    </div>
+    <p></p>
+<% end %>
+
