@@ -1,0 +1,24 @@
+<h1>Users</h1>
+
+<%= link_to 'New User', new_user_path %>
+
+<div>
+    <% @users.each do |user| %>
+        <div>
+            <h5><%= user.first_name %> <%= user.last_name %></h5>
+        </div>
+         <div>
+            <img src='<%= user.picture %>' height='100px'>
+        </div>
+        <div>
+            <h6><%= user.age %></h6>
+        </div>
+        <div>
+            <h6><%= user.email %></h6>
+        </div>
+        <div class='btn btn-success'><%= link_to 'Edit', edit_user_path(user.id) %></div>
+        <div class='btn btn-success'><%= link_to 'Show', user_path(user) %></div>
+        <div class='btn btn-danger'><%= link_to 'Delete', user_path(user.id), method: :delete %></div>
+        <p></p>
+    <% end %>
+</div>
