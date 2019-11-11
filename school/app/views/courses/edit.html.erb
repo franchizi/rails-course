@@ -1,0 +1,8 @@
+<form action='/courses/edit' method='POST'>
+    <input type='text' name='name' value='<%=@edit.name %>'>
+    <input type='text' name='location' value='<%=@edit.location %>'>
+    <div><textarea name='description'><%= @edit.description %></textarea></div>
+    <div><input type='hidden' name='id' value='<%= @edit.id %>'></div>
+    <div><input type='submit' value='Save'></div>
+</form>
+<a href='/courses'>Cancel</a>
